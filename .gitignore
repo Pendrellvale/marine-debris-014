@@ -1,0 +1,7 @@
+release_assets/
+_validation/
+__pycache__/
+*.html
+*.part
+original_files_unchanged.json
+

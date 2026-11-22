@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "suite": "overnight_v1",
+  "source_notebook_sha256": "947da4e17f8015da837f6676d91c776b796d5094c32a4602ff11ca664cbd7c9b",
+  "results": {
+    "name": "marine_debris_results_v1.zip",
+    "sha256": "53b93454cce38007c2972da1a7980ede924b54874faf38e6b811875507e6349f",
+    "bytes": 86961535
+  },
+  "checkpoints": [
+    {
+      "run": "01_faster_constant",
+      "name": "01_faster_constant_checkpoint.zip",
+      "sha256": "96a0818a490267ec1b1b40e56508f85198f064cf1b1ae2a5e8fab5b75db45beb",
+      "bytes": 836082288,
+      "original_checkpoint_sha256": "1313aa4699d897b873a500544a14eb00c59db894b65d0c152cafc9027f4fd92f"
+    },
+    {
+      "run": "02_faster_decay",
+      "name": "02_faster_decay_checkpoint.zip",
+      "sha256": "4bb8bb71f8d5711060a77978131d3df4ac0dbe36cef5cd628fd8497c369c0bcd",
+      "bytes": 836082294,
+      "original_checkpoint_sha256": "813bbb1a76efd221929fcc281daa3b0424ca3aa7ad8d77ad17cae4a3db6caadc"
+    },
+    {
+      "run": "03_faster_balanced",
+      "name": "03_faster_balanced_checkpoint.zip",
+      "sha256": "84845f867713b71f9ba0937e12664c034d4f75d9f0354af5c02be5ccbd71fabb",
+      "bytes": 836082301,
+      "original_checkpoint_sha256": "5e9e57910eb9c99c617d3583c48410795beb0c0eb18a96f392a436c18b73dcf8"
+    },
+    {
+      "run": "04_mask_decay",
+      "name": "04_mask_decay_checkpoint.zip",
+      "sha256": "5da30ed740cc46c43a055f7215c9e4b1d02e6de3492ac8fd2a2c2bcd8106b2ff",
+      "bytes": 857119019,
+      "original_checkpoint_sha256": "faa05b9d83bf8d25c35cdb52ccbe5610afb3985fe232a5816c869dbacd3385c6"
+    },
+    {
+      "run": "05_rtdetr",
+      "name": "05_rtdetr_checkpoint.zip",
+      "sha256": "145cb36388f0ad9579e71aaf21c3d2c5fc486d6e171a2af9aafcd41b0e9e6813",
+      "bytes": 514440606,
+      "original_checkpoint_sha256": "4ee21e0d6af99295aba0ead6292716a0042a0c96c0831fbdd6747fa8a3e35f46"
+    }
+  ]
+}
