@@ -6,7 +6,7 @@
   "errors": 0,
   "images": 35,
   "all_images_match_original": true,
-  "seconds": 30.41,
+  "seconds": 25.4,
   "checkpoint_downloads": "All five public assets verified by GitHub SHA-256, byte size and anonymous range request; not loaded for inference.",
   "release_assets": [
     {
