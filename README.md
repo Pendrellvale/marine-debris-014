@@ -1,5 +1,9 @@
 # Marine Debris Detection — Cloud Notebook
 
+[Open in Google Colab](https://colab.research.google.com/github/Pendrellvale/marine-debris-014/blob/main/Marine_Debris_Cloud.ipynb)
+· [Download the notebook](https://raw.githubusercontent.com/Pendrellvale/marine-debris-014/main/Marine_Debris_Cloud.ipynb)
+· [Results and model checkpoints](https://github.com/Pendrellvale/marine-debris-014/releases/tag/results-v1)
+
 Open `Marine_Debris_Cloud.ipynb` in Jupyter or Colab and choose **Run All**.
 The first cell downloads and verifies the saved experiment package. The rest restores the tables,
 figures and explanations. A live check rebuilds the main metric table from CSV records.
@@ -15,8 +19,8 @@ the five final checkpoints (about 3.9 GB). This does not trigger inference.
 If the download fails, check the connection and public Release, then rerun the setup cell.
 Verified downloads are cached. No login token should be added to the notebook.
 
-For the project owner: follow [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUIDE.md) before sharing.
-The repository placeholder must be configured and the Release assets uploaded first.
+The notebook is configured for the public `Pendrellvale/marine-debris-014` Release `results-v1`.
+For the project owner: [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUIDE.md) explains how to publish future versions.
 `marine_debris_014/` remains the separate, original local project.
 
 The figures use TrashCan imagery credited to the dataset authors and JAMSTEC. Models build on
