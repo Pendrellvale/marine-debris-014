@@ -1,0 +1,49 @@
+{
+  "repository": "https://github.com/Pendrellvale/marine-debris-014",
+  "notebook_download": "anonymous public GitHub URL, matches local configured file",
+  "results_download": "public GitHub Release; fresh cache; SHA-256 verified by notebook",
+  "code_cells": 22,
+  "errors": 0,
+  "images": 35,
+  "all_images_match_original": true,
+  "seconds": 30.41,
+  "checkpoint_downloads": "All five public assets verified by GitHub SHA-256, byte size and anonymous range request; not loaded for inference.",
+  "release_assets": [
+    {
+      "name": "marine_debris_results_v1.zip",
+      "bytes": 86961535,
+      "sha256": "53b93454cce38007c2972da1a7980ede924b54874faf38e6b811875507e6349f",
+      "anonymous_download": true
+    },
+    {
+      "name": "01_faster_constant_checkpoint.zip",
+      "bytes": 836082288,
+      "sha256": "96a0818a490267ec1b1b40e56508f85198f064cf1b1ae2a5e8fab5b75db45beb",
+      "anonymous_download": true
+    },
+    {
+      "name": "02_faster_decay_checkpoint.zip",
+      "bytes": 836082294,
+      "sha256": "4bb8bb71f8d5711060a77978131d3df4ac0dbe36cef5cd628fd8497c369c0bcd",
+      "anonymous_download": true
+    },
+    {
+      "name": "03_faster_balanced_checkpoint.zip",
+      "bytes": 836082301,
+      "sha256": "84845f867713b71f9ba0937e12664c034d4f75d9f0354af5c02be5ccbd71fabb",
+      "anonymous_download": true
+    },
+    {
+      "name": "04_mask_decay_checkpoint.zip",
+      "bytes": 857119019,
+      "sha256": "5da30ed740cc46c43a055f7215c9e4b1d02e6de3492ac8fd2a2c2bcd8106b2ff",
+      "anonymous_download": true
+    },
+    {
+      "name": "05_rtdetr_checkpoint.zip",
+      "bytes": 514440606,
+      "sha256": "145cb36388f0ad9579e71aaf21c3d2c5fc486d6e171a2af9aafcd41b0e9e6813",
+      "anonymous_download": true
+    }
+  ]
+}
