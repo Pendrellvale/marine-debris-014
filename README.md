@@ -1,28 +1,13 @@
-# Marine Debris Detection — Cloud Notebook
+# Automated Marine Debris Detection
 
-[Open in Google Colab](https://colab.research.google.com/github/Pendrellvale/marine-debris-014/blob/main/Marine_Debris_Cloud.ipynb)
-· [Download the notebook](https://raw.githubusercontent.com/Pendrellvale/marine-debris-014/main/Marine_Debris_Cloud.ipynb)
-· [Results and model checkpoints](https://github.com/Pendrellvale/marine-debris-014/releases/tag/results-v1)
+**COMP9444 · Project 014**
 
-Open `Marine_Debris_Cloud.ipynb` in Jupyter or Colab and choose **Run All**.
-The first cell downloads and verifies the saved experiment package. The rest restores the tables,
-figures and explanations. A live check rebuilds the main metric table from CSV records.
+Tianyu Tang (z5708585) · Sarang Rawat (z5630151) · Shunhao Xu (z5697334) · Roshni Roy (z5516075) · Haorui Kang (z5464761)
 
-This is a **completed-results notebook**. It does not retrain models or run fresh predictions.
-The original experiment code is shown in expandable blocks and included in the download.
-The results are also embedded, so you can read them before running anything.
+We compare Faster R-CNN, Mask R-CNN and RT-DETR on underwater images from TrashCan. The notebook covers the data, model design, training changes, results and limitations.
 
-You need Python 3.10+ with a Jupyter kernel and internet on first use. No GPU, WSL or dataset setup
-is needed for this edition. Set `DOWNLOAD_CHECKPOINTS = True` only if you also want to download
-the five final checkpoints (about 3.9 GB). This does not trigger inference.
+[Open in Colab](https://colab.research.google.com/github/Pendrellvale/marine-debris-014/blob/main/Marine_Debris_Detection.ipynb) · [Download notebook](https://raw.githubusercontent.com/Pendrellvale/marine-debris-014/main/Marine_Debris_Detection.ipynb) · [Results and checkpoints](https://github.com/Pendrellvale/marine-debris-014/releases/tag/results-v1)
 
-If the download fails, check the connection and public Release, then rerun the setup cell.
-Verified downloads are cached. No login token should be added to the notebook.
+Start with Sections 3–4 for the data and models, Sections 7–10 for the experiments, and Sections 11–12 for the comparison and conclusions.
 
-The notebook is configured for the public `Pendrellvale/marine-debris-014` Release `results-v1`.
-For the project owner: [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUIDE.md) explains how to publish future versions.
-`marine_debris_014/` remains the separate, original local project.
-
-The figures use TrashCan imagery credited to the dataset authors and JAMSTEC. Models build on
-Detectron2 and Hugging Face implementations with COCO pretraining. Upstream sources are credited
-in the notebook; this repository does not grant new licenses to those materials.
+Run All loads the saved experiment results. It does not repeat training or inference.

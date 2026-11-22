@@ -29,7 +29,7 @@ def main():
     address=f'http://127.0.0.1:{server.server_port}'
     os.environ['MARINE_DEBRIS_ASSET_BASE_URL']=address
     os.environ['MARINE_DEBRIS_CACHE_DIR']=str(clean/'cache')
-    original=ROOT/'Marine_Debris_Cloud.ipynb'
+    original=ROOT/'Marine_Debris_Detection.ipynb'
     nb=nbformat.read(original,as_version=4);nbformat.validate(nb)
     # The kernel sees only this clean directory, not the old project's Python package.
     for c in nb.cells:
@@ -54,7 +54,7 @@ def main():
     nbformat.write(nb,work/'cloud_executed.ipynb')
     # Export deliverable preview from configured-independent template, not localhost execution logs.
     preview,_=HTMLExporter().from_notebook_node(nbformat.read(original,as_version=4))
-    (ROOT/'Marine_Debris_Cloud.html').write_text(preview,encoding='utf-8')
+    (ROOT/'Marine_Debris_Detection.html').write_text(preview,encoding='utf-8')
     hashes=json.loads((ROOT/'original_files_unchanged.json').read_text())
     from cloud_runtime import digest,download,extract_verified
     for name,value in hashes.items():assert digest(ROOT.parent/'marine_debris_014'/name)==value

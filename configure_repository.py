@@ -12,7 +12,7 @@ def configure(repository, tag='results-v1'):
         raise ValueError('Use OWNER/REPOSITORY, not a URL.')
     if not re.fullmatch(r'[A-Za-z0-9_.-]+', tag):
         raise ValueError('Use a simple release tag.')
-    path = ROOT / 'Marine_Debris_Cloud.ipynb'
+    path = ROOT / 'Marine_Debris_Detection.ipynb'
     nb = json.loads(path.read_text(encoding='utf-8'))
     cell = next(c for c in nb['cells'] if c['id'] == 'cloud-setup')
     source = ''.join(cell['source'])

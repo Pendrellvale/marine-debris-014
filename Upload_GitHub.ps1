@@ -29,7 +29,7 @@ Check-Exit
 if ([IO.Path]::GetFullPath($repoRoot) -ne [IO.Path]::GetFullPath($PSScriptRoot)) {
     throw 'This must be a separate Git repository in the cloud-submission folder.'
 }
-git add -- .gitignore README.md GITHUB_UPLOAD_GUIDE.md Marine_Debris_Cloud.ipynb cloud_runtime.py configure_repository.py release_manifest.json repository.json Upload_GitHub.ps1 build_package.py validate_cloud.py
+git add -- .gitignore README.md GITHUB_UPLOAD_GUIDE.md Marine_Debris_Detection.ipynb cloud_runtime.py configure_repository.py release_manifest.json repository.json Upload_GitHub.ps1 build_package.py validate_cloud.py presentation_cleanup.py
 Check-Exit
 git diff --cached --quiet
 if ($LASTEXITCODE -eq 1) {

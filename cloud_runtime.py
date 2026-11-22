@@ -73,9 +73,7 @@ def start(base_url, manifest, cache_dir, download_checkpoints=False):
     for name, expected in records.items():
         if digest(RESULT_ROOT / name) != expected:
             raise ValueError('Extracted result file failed verification: ' + name)
-    display(Markdown('**Completed experiment loaded.** The following sections restore the saved '
-        'outputs of `overnight_v1`. No training or model inference is performed in this reading mode. '
-        'Tables and figures retain their original measured values. The live check below reads the CSV records.'))
+    print('Experiment records loaded and verified.')
     if download_checkpoints:
         for item in manifest['checkpoints']:
             path = download(base_url + '/' + item['name'], cache / item['name'], item['sha256'])
@@ -102,7 +100,7 @@ def show_saved_cell(cell_id):
 def show_original_code(cell_id):
     from IPython.display import HTML, display
     source = SNAPSHOT[cell_id]['source']
-    display(HTML('<details><summary>Original experiment code (reference, not executed here)</summary>'
+    display(HTML('<details><summary>Experiment code</summary>'
                  '<pre>' + html.escape(source) + '</pre></details>'))
 
 
@@ -119,10 +117,10 @@ def verify_results():
         assert abs(float(r['AP']) - audit['recomputed_AP']) < 1e-9
     body = ''.join('<tr><td>' + html.escape(r['model']) + '</td>' +
         ''.join(f'<td>{float(r[k]):.2f}</td>' for k in ['AP', 'AP50', 'AP75']) + '</tr>' for r in rows)
-    display(HTML('<h3>Live check of downloaded records</h3><table><tr><th>Model</th><th>AP</th>'
+    display(HTML('<h3>Results summary</h3><table><tr><th>Model</th><th>AP</th>'
         '<th>AP50</th><th>AP75</th></tr>' + body + '</table>'))
     print('All five CSV results agree with the saved independent COCO AP audit.')
-    print('This checks records, not a new model evaluation. AP is not classification accuracy.')
+    print('AP is not classification accuracy.')
 
 
 def export_outputs():

@@ -55,7 +55,7 @@ powershell -ExecutionPolicy Bypass -File .\Upload_GitHub.ps1 -Repository 'YOUR_U
 ## 4. 上传后必须做一次真实云端检查
 
 1. 用浏览器无痕窗口打开 `https://github.com/YOUR_USERNAME/marine-debris-014/releases/tag/results-v1`，确认能看到六个 ZIP，结果包可以直接下载。
-2. 把**配置过地址之后的** `Marine_Debris_Cloud.ipynb` 单独复制到另一文件夹，或上传到一个新的 Google Colab 会话。
+2. 把**配置过地址之后的** `Marine_Debris_Detection.ipynb` 单独复制到另一文件夹，或上传到一个新的 Google Colab 会话。
 3. 选择 Python 内核，点 Run All。默认不需要 GPU、不需要本地项目、不需要训练数据。
 4. 确认首个代码单元完成下载、SHA-256 校验，并显示五个 AP：40.46、43.92、43.77、43.96、45.75。继续检查所有图片和分析都显示，所有单元无报错。
 5. 保存这份执行后的新版 Notebook，再提交给老师。原来的 Notebook 和 HTML 可以继续留作备份。
@@ -72,7 +72,7 @@ Notebook 中不要设置 `MARINE_DEBRIS_ASSET_BASE_URL`，它仅用于内部测�
 ```powershell
 python configure_repository.py YOUR_USERNAME/marine-debris-014
 git init -b main
-git add .gitignore README.md GITHUB_UPLOAD_GUIDE.md Marine_Debris_Cloud.ipynb cloud_runtime.py configure_repository.py release_manifest.json repository.json Upload_GitHub.ps1 build_package.py validate_cloud.py
+git add .gitignore README.md GITHUB_UPLOAD_GUIDE.md Marine_Debris_Detection.ipynb cloud_runtime.py configure_repository.py release_manifest.json repository.json Upload_GitHub.ps1 build_package.py validate_cloud.py presentation_cleanup.py
 git commit -m "Add cloud results notebook"
 gh repo create YOUR_USERNAME/marine-debris-014 --public --source . --remote origin --push
 gh release create results-v1 --repo YOUR_USERNAME/marine-debris-014 --target main --title "Completed experiments" --notes "Frozen results and final checkpoints."

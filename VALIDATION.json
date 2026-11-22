@@ -1,13 +1,12 @@
 {
   "test": "fresh directory, HTTP download, no project imports or GPU",
-  "cells": 54,
+  "cells": 53,
   "executed_code_cells": 22,
   "images": 35,
   "errors": 0,
-  "seconds": 17.44,
+  "seconds": 17.1,
   "verified_cache_reused": true,
   "unsafe_archive_rejected": true,
   "original_files_unchanged": true,
-  "public_github_test": "Passed; see PUBLIC_VALIDATION.json",
-  "all_35_images_match_original_exactly": true
+  "public_github_test": "Pending owner repository configuration and upload"
 }

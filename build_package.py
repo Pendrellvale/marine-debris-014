@@ -159,7 +159,9 @@ The original queue code is shown for reference and is not executed in this cloud
     nb['cells']=newcells
     nb['metadata']['kernelspec']=dict(display_name='Python 3',language='python',name='python3')
     nb['metadata']['cloud_edition']=dict(mode='saved_result_restoration',release=release['results']['sha256'])
-    (HERE/'Marine_Debris_Cloud.ipynb').write_text(json.dumps(nb,ensure_ascii=False,indent=1),encoding='utf-8')
+    from presentation_cleanup import clean_notebook
+    nb=clean_notebook(nb)
+    (HERE/'Marine_Debris_Detection.ipynb').write_text(json.dumps(nb,ensure_ascii=False,indent=1),encoding='utf-8')
     assert all(sha(SOURCE/name)==value for name,value in originals.items())
     (HERE/'original_files_unchanged.json').write_text(json.dumps(originals,indent=2),encoding='utf-8')
     print('Results package MB:',round(archive.stat().st_size/1024**2,2))
